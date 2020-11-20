@@ -12,46 +12,9 @@
       </svg>
     </div>
 </div>
-
-<table class="table">
-    <thead class="black white-text">
-      <tr>
-        <th scope="col">SNo</th>
-        <th scope="col">Package</th>
-        <th scope="col">Type</th>
-        <th scope="col">Report</th>
-        <th scope="col">Meeting Schedule</th>
-        <th scope="col">Meeting Date & Time</th>
-        <th scope="col">Meeting Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>@mdo</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@twitter</td>
-        <td>Larry</td>
-        <td>the Bird</td>
-      </tr>
-    </tbody>
-  </table>
+<nb-card>  
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source" >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
