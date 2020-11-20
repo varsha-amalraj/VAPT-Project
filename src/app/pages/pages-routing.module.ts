@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { CustomerDashboardComponent } from './customer/dashboard/dashboard.component';
 import { CustomerMeetingComponent } from './customer/meeting/meeting.component';
-import { CustomerPaymentStatusComponent } from './customer/payment/paymentStatus.component';
+import { CustomerPaymentsComponent } from './customer/payment/payments.component';
 import { ReportComponent } from './customer/report/report.component';
 
 const routes: Routes = [
@@ -20,8 +20,8 @@ const routes: Routes = [
         component: ReportComponent,
       },
       {
-        path: 'customer/payment',
-        component: CustomerPaymentStatusComponent,
+        path: 'customer/payments',
+        component: CustomerPaymentsComponent,
       },
       {
         path: 'customer/meeting',

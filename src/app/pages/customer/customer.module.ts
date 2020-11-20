@@ -5,14 +5,14 @@ import { CommonModule } from '@angular/common';
 import { ReportComponent } from './report/report.component';
 import { CustomerDashboardComponent } from './dashboard/dashboard.component';
 import { CustomerMeetingComponent } from './meeting/meeting.component';
-import { CustomerPaymentStatusComponent } from './payment/paymentStatus.component';
+import { CustomerPaymentsComponent } from './payment/payments.component';
 
 @NgModule({
   declarations: [
     CustomerDashboardComponent,
     ReportComponent,
     CustomerMeetingComponent,
-    CustomerPaymentStatusComponent,
+    CustomerPaymentsComponent,
   ],
   imports: [
     NbCardModule,

@@ -1,0 +1,25 @@
+<div style="background-color: white;padding: 20px;border-radius: 5px;">
+    <h4 class="text-center">Payments</h4>
+    <label class="search-label" for="search">Search:</label>
+    <input id="search" class="search-input">
+    <table class="table table-bordered table-hover .table-striped">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Payment ID</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let payment of paymentsData;let i=index">
+                <th scope="row">{{i}}</th>
+                <td>{{payment.payment_id}}</td>
+                <td>{{payment.amount}}</td>
+                <td>{{payment.date}}</td>
+                <td>{{payment.status}}</td>                
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+[
+    {
+        "payment_id": 1234567890,
+        "amount": 1250.25,
+        "date": "12-05-2020",
+        "status": "Fail"
+    },
+    {
+        "payment_id": 1234567880,
+        "amount": 2350.25,
+        "date": "12-06-2019",
+        "status": "Success"
+    }
+]
