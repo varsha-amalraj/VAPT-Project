@@ -4,15 +4,17 @@ import { NbMenuModule } from '@nebular/theme';
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
+import { CustomerModule } from './customer/customer.module';
 
 @NgModule({
   imports: [
     PagesRoutingModule,
     ThemeModule,
-    NbMenuModule
+    NbMenuModule,
+    CustomerModule,
   ],
   declarations: [
-    PagesComponent
+    PagesComponent,
   ],
 })
 export class PagesModule {
