@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CustomerReportService } from './customer-report.service';
 
 const SERVICES = [
-  CustomerReportService
+  CustomerReportService,
 ];
 
 @NgModule({

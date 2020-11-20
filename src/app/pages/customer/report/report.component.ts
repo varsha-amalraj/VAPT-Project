@@ -5,10 +5,9 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.scss']
+  styleUrls: ['./report.component.scss'],
 })
 export class ReportComponent {
-
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -62,5 +61,4 @@ export class ReportComponent {
     const data = this.service.getData();
     this.source.load(data);
   }
-
 }

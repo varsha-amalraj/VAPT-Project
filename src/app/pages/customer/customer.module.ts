@@ -2,17 +2,23 @@ import { NgModule } from '@angular/core';
 import { NbCardModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { CommonModule } from '@angular/common';
-import { CustomerComponent } from './customer.component';
 import { ReportComponent } from './report/report.component';
-import { CustomerRoutingModule } from './customer-routing.module';
+import { CustomerDashboardComponent } from './dashboard/dashboard.component';
+import { CustomerMeetingComponent } from './meeting/meeting.component';
+import { CustomerPaymentStatusComponent } from './payment/paymentStatus.component';
 
 @NgModule({
-  declarations: [CustomerComponent, ReportComponent],
+  declarations: [
+    CustomerDashboardComponent,
+    ReportComponent,
+    CustomerMeetingComponent,
+    CustomerPaymentStatusComponent,
+  ],
   imports: [
     NbCardModule,
     Ng2SmartTableModule,
     CommonModule,
-    CustomerRoutingModule
-  ]
+  ],
 })
-export class CustomerModule { }
+
+export class CustomerModule {}
