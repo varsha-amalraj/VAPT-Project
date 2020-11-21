@@ -1,15 +1,10 @@
 @import '../../../@theme/styles/themes';
 
-@include nb-install-component() {
-  .search-input {
-    margin-bottom: 1rem;
-  }
-}
 .div_payment {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
-  .in_search {
+  .search-input {
     margin: 0 10px 12px;
   }
   .btn_nxt {
