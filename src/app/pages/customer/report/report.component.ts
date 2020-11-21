@@ -7,9 +7,9 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.scss']
+  styleUrls: ['./report.component.scss'],
 })
-export class ReportComponent implements OnInit{
+export class ReportComponent implements OnInit {
   customers: any = [];
   settings = {
     add: {
@@ -68,10 +68,13 @@ export class ReportComponent implements OnInit{
 
   ngOnInit() {
     for (let i = 0; i <= this.getReport.length; i++) {
-      // console.log((this.getReport[i]).type);
-      this.customers.push({SNo: (this.getReport[i]).sno,Package: (this.getReport[i]).package, Type: (this.getReport[i]).type, Report: (this.getReport[i]).report, "Meeting Schedule": (this.getReport[i]).meeting_schedule, "Meeting Date&Time": (this.getReport[i]).meeting_date, "Meeting Link": (this.getReport[i]).meeting_link});
+      this.customers.push({
+        'SNo': (this.getReport[i]).sno, 'Package': (this.getReport[i]).package,
+        'Type': (this.getReport[i]).type, 'Report': (this.getReport[i]).report,
+        'Meeting Schedule': (this.getReport[i]).meeting_schedule, 'Meeting Date&Time': (this.getReport[i]).meeting_date,
+        'Meeting Link': (this.getReport[i]).meeting_link,
+      });
     }
-    // console.log((this.getReport));
   }
 
   export() {

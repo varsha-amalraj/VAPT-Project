@@ -3,7 +3,7 @@ import { ExportService } from 'app/service/export.service';
 
 
 @Directive({
-  selector: '[ngxExport]'
+  selector: '[ngxExport]',
 })
 export class ExportDirective {
 
@@ -12,7 +12,6 @@ export class ExportDirective {
   @Input() fileName: string;
 
   @HostListener('click', ['$event']) onClick($event) {
-    console.log('clicked: ' + $event);
     this.exportService.exportExcel(this.customers, this.fileName);
   }
 
