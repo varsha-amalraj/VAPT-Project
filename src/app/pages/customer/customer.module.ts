@@ -6,6 +6,7 @@ import { ReportComponent } from './report/report.component';
 import { CustomerDashboardComponent } from './dashboard/dashboard.component';
 import { CustomerMeetingComponent } from './meeting/meeting.component';
 import { CustomerPaymentsComponent } from './payment/payments.component';
+import { ExportDirective } from 'app/directives/export.directive';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CustomerPaymentsComponent } from './payment/payments.component';
     ReportComponent,
     CustomerMeetingComponent,
     CustomerPaymentsComponent,
+    ExportDirective,
   ],
   imports: [
     NbCardModule,

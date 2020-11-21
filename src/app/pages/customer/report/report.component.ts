@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CustomerReportData } from 'app/@core/data/customer-table';
+import { ExportService } from 'app/service/export.service';
+
 import { LocalDataSource } from 'ng2-smart-table';
 
 @Component({
   selector: 'ngx-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.scss'],
+  styleUrls: ['./report.component.scss']
 })
-export class ReportComponent {
+export class ReportComponent implements OnInit{
+  customers: any = [];
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -56,9 +59,23 @@ export class ReportComponent {
   };
 
   source: LocalDataSource = new LocalDataSource();
-
-  constructor(private service: CustomerReportData) {
+  getReport = [];
+  constructor(private service: CustomerReportData, private exportService: ExportService) {
     const data = this.service.getData();
+    this.getReport = data;
     this.source.load(data);
   }
+
+  ngOnInit() {
+    for (let i = 0; i <= this.getReport.length; i++) {
+      // console.log((this.getReport[i]).type);
+      this.customers.push({SNo: (this.getReport[i]).sno,Package: (this.getReport[i]).package, Type: (this.getReport[i]).type, Report: (this.getReport[i]).report, "Meeting Schedule": (this.getReport[i]).meeting_schedule, "Meeting Date&Time": (this.getReport[i]).meeting_date, "Meeting Link": (this.getReport[i]).meeting_link});
+    }
+    // console.log((this.getReport));
+  }
+
+  export() {
+    this.exportService.exportExcel(this.getReport, 'customers');
+  }
+
 }
