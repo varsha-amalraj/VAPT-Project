@@ -1,0 +1,17 @@
+@import "../../../@theme/styles/themes";
+
+.div_meeting {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  .div_inputs_meet input {
+    margin: 12px;
+  }
+  label {
+    margin-top: 9px;
+  }
+}
+.center-me {
+  margin: 0 auto;
+  display: block;
+}
