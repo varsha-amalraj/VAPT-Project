@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbCardModule } from '@nebular/theme';
+import { NbCardModule, NbInputModule } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { CommonModule } from '@angular/common';
 import { ReportComponent } from './report/report.component';
@@ -17,6 +17,7 @@ import { CustomerPaymentsComponent } from './payment/payments.component';
   imports: [
     NbCardModule,
     Ng2SmartTableModule,
+    NbInputModule,
     CommonModule,
   ],
 })
