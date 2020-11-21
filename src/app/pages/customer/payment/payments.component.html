@@ -22,10 +22,13 @@
             </tr>
         </tbody>
     </table>
-    <div class="clearfix">
-        <button *ngIf="isPrevious" (click)="previous();" type="button"
-            class="btn btn-primary">Previous</button>
-        <button *ngIf="isNext" (click)="next();" type="button" class="btn btn-primary btn_nxt">Next</button>
+    <div class="row clearfix">
+        <div class="col">
+            <button *ngIf="isPrevious" (click)="previous();" type="button" class="btn btn-primary">Previous</button>
+        </div>
+        <div class="col text-center">page {{page}} of {{totalPages}}</div>
+        <div class="col">
+            <button *ngIf="isNext" (click)="next();" type="button" class="btn btn-primary btn_nxt">Next</button>
+        </div>
     </div>
-    <div class="text-center">page {{page}} of {{totalPages}}</div>
 </div>
