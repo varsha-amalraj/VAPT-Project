@@ -15,28 +15,29 @@ import {
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { CommonModule } from '@angular/common';
 import { ReportComponent } from './report/report.component';
-import { CustomerDashboardComponent } from './dashboard/dashboard.component';
 import { CustomerMeetingComponent } from './meeting/meeting.component';
-import { CustomerPaymentStatusComponent } from './payment/paymentStatus.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomerOneClickPackageComponent } from './one-click-package/one-click-package.component';
 import { CustomerCustomPackageComponent } from './custom-package/custom-package.component';
 import { CustomerOneClickHomeComponent } from './one-click-home/one-click-home.component';
+import { CustomerPaymentsComponent } from './payment/payments.component';
+import { ExportDirective } from 'app/directives/export.directive';
 
 @NgModule({
   declarations: [
-    CustomerDashboardComponent,
     ReportComponent,
     CustomerMeetingComponent,
-    CustomerPaymentStatusComponent,
     CustomerOneClickPackageComponent,
     CustomerCustomPackageComponent,
     CustomerOneClickHomeComponent,
+    CustomerPaymentsComponent,
+    ExportDirective,
   ],
   imports: [
     ThemeModule,
     NbCardModule,
     Ng2SmartTableModule,
+    NbInputModule,
     CommonModule,
     ReactiveFormsModule,
     FormsModule,

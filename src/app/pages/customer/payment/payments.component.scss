@@ -1,0 +1,13 @@
+@import '../../../@theme/styles/themes';
+
+.div_payment {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  .search-input {
+    margin: 0 10px 12px;
+  }
+  .btn_nxt {
+    float: right;
+  }
+}

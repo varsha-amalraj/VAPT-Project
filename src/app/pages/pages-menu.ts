@@ -12,9 +12,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/customer/report',
   },
   {
-    title: 'Payment Status',
+    title: 'Payments',
     icon: 'credit-card-outline',
-    link: '/pages/customer/payment',
+    link: '/pages/customer/payments',
   },
   {
     title: 'Meetings',
