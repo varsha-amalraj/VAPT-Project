@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent implements OnInit {
 
-  constructor() { }
+export class CustomerDashboardComponent {
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  goToOneClickPackage() {
+    this.router.navigateByUrl('/pages/customer/dashboard/one-click-home');
   }
 
+  goToCustomPackage() {
+    this.router.navigateByUrl('/pages/customer/dashboard/custom-package');
+  }
 }
