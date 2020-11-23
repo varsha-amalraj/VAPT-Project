@@ -3,20 +3,6 @@
   margin: 20px auto;
 }
 
-.column {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
-}
-.card-text {
-  margin-top: 40px;
-  font-size: 70px;
-  font-weight: bold;
-  color: $color-brown;
-  text-align: center;
-}
-
 .has-search .form-control {
   padding-left: 2.375rem;
 }

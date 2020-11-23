@@ -1,0 +1,65 @@
+<h3 class="text-center font-italic text-secondary">OneClick Package</h3>
+<div class="main">
+    <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="Search">
+    </div>
+    <p class="text-center mt-1 text-secondary">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+        25 Packages Available
+    </p>
+</div>
+
+
+<form [formGroup]="form">
+    <div class="card scroll">
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox" disabled
+                    value="1-10 IP's">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox" disabled
+                    value="10-50 IP's">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input"
+                            (change)="onCheckboxChange($event)">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with dropdown button" disabled
+                    value="Web Application">
+            </div>
+
+            <div class="d-flex justify-content-center" *ngIf="isShown">
+                <nb-select multiple placeholder="Select Subcategory" fullWidth>
+                    <nb-option value="1">Payment gateway </nb-option>
+                    <nb-option value="2">Generic static websites</nb-option>
+                    <nb-option value="3">HRM portals web application</nb-option>
+                    <nb-option value="4">Websites with Login pages</nb-option>
+                    <nb-option value="5">SAP or ERP application</nb-option>
+                </nb-select>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div class="d-flex">
+    <div class="mr-auto p-2"> <button type="button" class="btn btn-secondary" (click)="navigateBack()">Back</button>
+    </div>
+    <div class="p-2"> <button type="button" class="btn btn-secondary" (click)="navigateNext()">Next</button>
+    </div>
+</div>

@@ -1,0 +1,152 @@
+<h3 class="text-center font-italic text-secondary">Custom Package</h3>
+
+<nb-card>
+    <nb-card-body>
+        <div class="row">
+            <div class="col-md-12">
+                <nb-card class="inline-form-card">
+                    <nb-card-header>What are your reasons for this test</nb-card-header>
+                    <nb-card-body>
+                        <form class="form-inline">
+                            <nb-select placeholder="Select Reason" fullWidth (selectedChange)="onChangeReason($event)">
+                                <nb-option value="COMPLIANCE">Meet compliance requirements</nb-option>
+                                <nb-option value="2">Customer requested</nb-option>
+                                <nb-option value="3">Supplier requested</nb-option>
+                                <nb-option value="4">Self-interests</nb-option>
+                                <nb-option value="OTHERS">Others</nb-option>
+                            </nb-select>
+                        </form>
+                        <div class='mt-2' *ngIf="isShown">
+                            <form class="form-inline">
+                                <label class='mr-2'>Other Details</label>
+                                <input class='mr-2' type="text" nbInput shape="round">
+                                <button nbButton status="primary" shape="round">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        </div>
+
+        <div class="row" *ngIf="showCompliance">
+            <div class="col-md-12">
+                <nb-card class="inline-form-card">
+                    <nb-card-header>Compliance requirements</nb-card-header>
+                    <nb-card-body>
+                        <form class="form-inline">
+                            <nb-select placeholder="Select Compliance" fullWidth
+                                (selectedChange)="onChangeCompliance($event)">
+                                <nb-option value="1">PCIDSS</nb-option>
+                                <nb-option value="2">FCA</nb-option>
+                                <nb-option value="3">ISO</nb-option>
+                                <nb-option value="OTHERS">Others</nb-option>
+                            </nb-select>
+                        </form>
+                        <div class='mt-2' *ngIf="isShowOthers">
+                            <form class="form-inline">
+                                <label class='mr-2'>Other Details</label>
+                                <input class='mr-2' type="text" nbInput shape="round">
+                                <button nbButton status="primary" shape="round">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <nb-card class="inline-form-card">
+                    <nb-card-header>What type of test do you require?</nb-card-header>
+                    <nb-card-body>
+                        <nb-radio-group [(ngModel)]="option">
+                            <nb-radio *ngFor="let option of options" [value]="option.value">
+                                {{ option.label }}
+                            </nb-radio>
+                        </nb-radio-group>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+            <div class="col-md-6">
+                <nb-card class="inline-form-card">
+                    <nb-card-header>What type of test do you require?</nb-card-header>
+                    <nb-card-body class="example-items-rows">
+                        <nb-checkbox>Black Box</nb-checkbox>
+                        <nb-checkbox>White Box</nb-checkbox>
+                        <nb-checkbox>Grey Box</nb-checkbox>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <nb-card class="inline-form-card">
+                    <nb-card-header>Provide Hostname and IP address</nb-card-header>
+                    <nb-card-body class="example-items-rows">
+                        <form class="form-inline">
+                            <input class='mr-2' type="text" nbInput shape="round" placeholder="Enter Host name">
+                            <input class='mr-2' type="text" nbInput shape="round" placeholder="Enter IP address">
+                            <button nbButton status="primary" shape="round">
+                                <nb-icon icon="plus"></nb-icon>
+                            </button>
+                        </form>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <nb-card class="inline-form-card">
+                    <nb-card-header>If IaaS, please include firewalls, load balancers, routers, switches,
+                        servers, storage and other physical devices.</nb-card-header>
+                    <nb-card-body class="example-items-rows">
+                        <form class="form-inline">
+                            <input class='mr-2' type="text" nbInput shape="round" placeholder="Enter Details">
+                            <button nbButton status="primary" shape="round">
+                                <nb-icon icon="plus"></nb-icon>
+                            </button>
+                        </form>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <nb-card class="inline-form-card">
+                    <nb-card-header>Do you have security controls that require whitelisting before the testing?
+                    </nb-card-header>
+                    <nb-card-body>
+                        <nb-radio-group [(ngModel)]="securityOption">
+                            <nb-radio *ngFor="let securityOption of securityOptions" [value]="securityOption.value">
+                                {{ securityOption.label }}
+                            </nb-radio>
+                        </nb-radio-group>
+                        <div class='mt-2' *ngIf="securityOption">
+                            <form class="form-inline">
+                                <label class='mr-2'>If Yes enter details</label>
+                                <input class='mr-2' type="text" nbInput shape="round">
+                            </form>
+                        </div>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+         
+
+        </div>
+    </nb-card-body>
+</nb-card>
+
+<div class="d-flex">
+    <div class="mr-auto p-2"> <button type="button" class="btn btn-secondary" (click)="navigateBack()">Back</button>
+    </div>
+    <div class="p-2"> <button type="button" class="btn btn-secondary">Next</button>
+    </div>
+</div>

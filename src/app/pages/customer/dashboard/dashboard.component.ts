@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Chart } from '../../../../../node_modules/chart.js';
 
 @Component({
@@ -6,11 +7,11 @@ import { Chart } from '../../../../../node_modules/chart.js';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent implements OnInit {
 
-  constructor() { }
+export class CustomerDashboardComponent implements OnInit {
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     var myChart = new Chart("myChart", {
       type: 'pie',
       data: {
@@ -30,5 +31,14 @@ export class DashboardComponent implements OnInit {
       }
     });
   }
+
+  goToOneClickPackage() {
+    this.router.navigateByUrl('/pages/customer/dashboard/one-click-home');
+  }
+
+  goToCustomPackage() {
+    this.router.navigateByUrl('/pages/customer/dashboard/custom-package');
+  }
+
 
 }
