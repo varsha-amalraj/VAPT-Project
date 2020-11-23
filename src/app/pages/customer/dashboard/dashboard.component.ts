@@ -12,7 +12,7 @@ export class CustomerDashboardComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    let myChart = new Chart('myChart', {
+    const myChart = new Chart('myChart', {
       type: 'pie',
       data: {
         // labels: ["Green", "Blue", "Gray", "Purple", "Yellow", "Red", "Black"],
@@ -26,9 +26,9 @@ export class CustomerDashboardComponent implements OnInit {
             '#e74c3c',
             '#34495e',
           ],
-          data: [12, 19, 3, 17, 28, 24, 7]
-        }]
-      }
+          data: [12, 19, 3, 17, 28, 24, 7],
+        }],
+      },
     });
   }
 
