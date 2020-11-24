@@ -8,6 +8,7 @@ import { CustomerOneClickPackageComponent } from './customer/one-click-package/o
 import { CustomerOneClickHomeComponent } from './customer/one-click-home/one-click-home.component';
 import { CustomerCustomPackageComponent } from './customer/custom-package/custom-package.component';
 import { CustomerDashboardComponent } from './customer/dashboard/dashboard.component';
+import { SummaryComponent } from './customer/summary/summary.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path: 'customer/dashboard/custom-package',
         component: CustomerCustomPackageComponent,
+      },
+      {
+        path: 'customer/dashboard/summary',
+        component: SummaryComponent,
       },
       {
         path: '',

@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ThemeModule } from '../../@theme/theme.module';
 import {
   NbActionsModule,
@@ -13,14 +16,15 @@ import {
   NbUserModule,
 } from '@nebular/theme';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { CommonModule } from '@angular/common';
+
 import { ReportComponent } from './report/report.component';
 import { CustomerMeetingComponent } from './meeting/meeting.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomerOneClickPackageComponent } from './one-click-package/one-click-package.component';
 import { CustomerCustomPackageComponent } from './custom-package/custom-package.component';
 import { CustomerOneClickHomeComponent } from './one-click-home/one-click-home.component';
 import { CustomerPaymentsComponent } from './payment/payments.component';
+import { SummaryComponent } from './summary/summary.component';
+
 import { ExportDirective } from 'app/directives/export.directive';
 
 @NgModule({
@@ -32,6 +36,7 @@ import { ExportDirective } from 'app/directives/export.directive';
     CustomerOneClickHomeComponent,
     CustomerPaymentsComponent,
     ExportDirective,
+    SummaryComponent,
   ],
   imports: [
     ThemeModule,

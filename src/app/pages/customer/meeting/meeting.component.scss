@@ -1,0 +1,27 @@
+.div_meeting {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  .div_inputs_meet input {
+    margin: 12px;
+  }
+  label {
+    margin-top: 9px;
+  }
+  .dropdown-menu {
+    background-color: rgb(211, 207, 207);
+  }
+  .div_sub_in {
+    border-radius: 25px;
+    background-color: rgb(247, 247, 247);
+  }
+}
+@media (min-width: 576px) {
+  .div_sub_in {
+    padding-right: 20px;
+  }
+}
+.center-me {
+  margin: 0 auto;
+  display: block;
+}

@@ -1,0 +1,39 @@
+.div_summary {
+  background-color: white;
+  // padding: 20px;
+  border-radius: 5px;
+  a {
+    text-decoration: none;
+  }
+  .box {
+    border: 1px solid gray;
+  }
+  .bb {
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+  }
+  .b_add {
+    float: right;
+    // right: 0;
+  }
+  .img {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(104, 102, 102);
+    border-radius: 6px;
+    box-shadow: -5px -5px rgb(223, 222, 222);
+  }
+  .item {
+    background-color: lightgray;
+  }
+  .close_icon {
+    background-color: lightgray;
+    nb-icon {
+      margin-top: 90%;
+    }
+  }
+}
+.center-me {
+  margin: 0 auto;
+  display: block;
+}
