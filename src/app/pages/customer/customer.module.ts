@@ -23,6 +23,7 @@ import { CustomerOneClickPackageComponent } from './one-click-package/one-click-
 import { CustomerCustomPackageComponent } from './custom-package/custom-package.component';
 import { CustomerOneClickHomeComponent } from './one-click-home/one-click-home.component';
 import { CustomerPaymentsComponent } from './payment/payments.component';
+import { SummaryComponent } from './summary/summary.component';
 
 import { ExportDirective } from 'app/directives/export.directive';
 
@@ -35,6 +36,7 @@ import { ExportDirective } from 'app/directives/export.directive';
     CustomerOneClickHomeComponent,
     CustomerPaymentsComponent,
     ExportDirective,
+    SummaryComponent,
   ],
   imports: [
     ThemeModule,
