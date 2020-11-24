@@ -20,5 +20,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Meetings',
     icon: 'clock-outline',
     link: '/pages/customer/meeting',
-  }
+  },
 ];
